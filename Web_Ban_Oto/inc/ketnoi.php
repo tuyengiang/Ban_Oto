@@ -36,13 +36,16 @@
 	function hoten_exists($hoten){
 		return is_numeric($hoten);
 	}
+	function validate_strlen($password){
+		return strlen($password)<20 ? true :false;
+	}
 
 	/**phan trang product admin **/
 
 	$post_page=5;
 	function get_page_admin_product(){
 		global $conn;
-		$sql="SELECT COUNT(id) as total FROM product";
+		$sql="SELECT COUNT(masp) as total FROM product";
 		$query=mysqli_query($conn,$sql);
 		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
 		return $total["total"];

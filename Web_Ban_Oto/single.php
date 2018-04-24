@@ -1,7 +1,7 @@
 <?php 
 	require_once('inc/ketnoi.php'); 
 	 $id=$_GET["id"];
-	 $sql="SELECT * FROM product WHERE id='{$id}'";
+	 $sql="SELECT * FROM product WHERE masp='{$id}'";
 	 $query=mysqli_query($conn,$sql);
 	 $row=mysqli_fetch_array($query,MYSQLI_ASSOC);
 	 $title=$row["tensp"];
@@ -27,7 +27,7 @@
 <?php require_once('template/header-title.php'); ?>
 <?php require_once("template/menu.php"); ?>
 <?php 
-	$sql="SELECT * FROM product WHERE id='{$id}'";
+	$sql="SELECT * FROM product WHERE masp='{$id}'";
 	$query=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
 	$title=$row["tensp"];
@@ -88,7 +88,7 @@
 				<div style="clear:left;"></div>
 				<div class="tab-content">
 					<div id="tab-1" class="tab-item">
-						<?php echo $row["noidung"]; ?>
+						<p><?php echo $row["noidung"]; ?></p>
 					</div><!--tab1-->
 					<div id="tab-2" class="tab-item">
 						

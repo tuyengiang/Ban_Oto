@@ -43,7 +43,7 @@
 
 					<div class="content-excerpt">
 						<div class="content-title">
-							<a href="single.php?id=<?php echo $row['id']; ?>"><?php echo $row['tensp']; ?></a>
+							<a href="single.php?id=<?php echo $row['masp']; ?>"><?php echo $row['tensp']; ?></a>
 						</div><!--content-title-->
 						<div class="content-cart">
 								Gía bán: <?php 

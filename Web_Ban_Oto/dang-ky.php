@@ -10,6 +10,9 @@
 		$ngaysinh=$_POST["ngaysinh"];
 		$sex=$_POST["gioitinh"];
 		$error_array=array();
+		if(is_numeric($hoten)){
+			$error_array["hoten"]="Họ tên bạn nhập phải là ký tự !!!";
+		}
 		if(validate_email($email)){
 			$error_array["email"]="Email phải đúng định dạng !!!";
 		}
@@ -19,8 +22,11 @@
 		if(validate_phone($phone)){
 			$error_array["phone"]="Số điện phải đúng định dạng [0-9]";
 		}
-		if($password1!=$password2 || !validate_password($password1)){
-			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc hơn 6 ký tự";
+		if(strlen($phone)<9 || strlen($phone)>11){
+			$error_array["phone"]="Số điện thoại phải lớn hơn 9 và nhỏ hơn 11 ký tự !!!";
+		}
+		if($password1!=$password2 || !validate_pasword($password1) ||!validate_strlen($password1)){
+			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc lớn hơn 6 và nhỏ hơn 20 ký tự !!!";
 		}
 		if(empty($error_array)){
 				$email=mysqli_escape_string($conn,$email);
@@ -61,6 +67,11 @@
 						<input type="text" class="input-register" name="hoten" placeholder="Họ & tên đệm" required="">
 					</td>
 				</tr>
+				<?php 
+					if(!empty($error_array["hoten"])){
+								echo "<tr><td></td><td><p>".$error_array["hoten"]."</p></td></tr>";
+					}
+				?>
 				<tr>
 					<td class="td">Email *</td>
 					<td>

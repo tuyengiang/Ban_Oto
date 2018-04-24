@@ -6,7 +6,7 @@
 <div class="main-right">
 
 	<?php 
-		$sql="SELECT * FROM product WHERE id='{$id_sp}'";
+		$sql="SELECT * FROM product WHERE masp='{$id_sp}'";
 		$query=mysqli_query($conn,$sql);
 		$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
 	 ?>

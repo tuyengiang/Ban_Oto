@@ -5,7 +5,7 @@
 <div class="main-right">
 
 <?php  
-	$sql="SELECT * FROM product WHERE id='{$id}'";
+	$sql="SELECT * FROM product WHERE masp='{$id}'";
 	$query=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
 
@@ -47,7 +47,7 @@
 			}
 			if(empty($thongbao)){
 				if(move_uploaded_file($images_tmp,$path)){
-					$sql="UPDATE product SET masp='{$masp}',tensp='{$tensp}',giaban='{$giaban}',tomtat='{$tomtat}',noidung='{$noidung}',hinhanh='{$anh}',nguoidang='{$nguoidung}',madanhmuc='{$danhmuc}' WHERE id='{$id}'";
+					$sql="UPDATE product SET masp='{$masp}',tensp='{$tensp}',giaban='{$giaban}',tomtat='{$tomtat}',noidung='{$noidung}',hinhanh='{$anh}',nguoidang='{$nguoidung}',madanhmuc='{$danhmuc}' WHERE masp='{$id}'";
 					$query=mysqli_query($conn,$sql);
 					if($query){
 						$thongbao["xacthuc"]="Sửa sản phẩm thành công !!!";

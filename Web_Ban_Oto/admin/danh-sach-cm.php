@@ -4,7 +4,7 @@
 <?php 
 	if(isset($_POST["delete"])){
 		$id=$_POST["delete"];
-		$sql="DELETE FROM danhmuc WHERE id='{$id}'";
+		$sql="DELETE FROM danhmuc WHERE madanhmuc='{$id}'";
 		$query=mysqli_query($conn,$sql);
 		if($query){
 			$mess="Xóa thành công !!!";
@@ -47,9 +47,9 @@
 				
 					<td>
 					
-						<a title="sửa chuyên mục" href="edit-category.php?id=<?php echo $row['id'];?>"><i class="fa fa-edit"></i></a>
+						<a title="sửa chuyên mục" href="edit-category.php?id=<?php echo $row['madanhmuc'];?>"><i class="fa fa-edit"></i></a>
 						<form method="post">
-							<input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
+							<input type="hidden" name="delete" value="<?php echo $row['madanhmuc']; ?>">
 							<button style="margin-left:5px;" type="submit" class="trash" onclick="return confirm('Bạn muốn xóa đanh mục không ?');"><i class="fa fa-trash"></i>
 						</form>
 				</td>

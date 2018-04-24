@@ -4,7 +4,7 @@
 <?php 
 	if(isset($_POST["delete"])){
 		$id=$_POST["delete"];
-		$sql="DELETE FROM product WHERE id='{$id}'";
+		$sql="DELETE FROM product WHERE masp='{$id}'";
 		$query=mysqli_query($conn,$sql);
 		if($query){
 			$mess="Xóa thành công !!!";
@@ -40,20 +40,20 @@
 				$startform=($page-1)*$post_page;
 				$totalpage=round($totalproduct/$post_page);
 
-				$sql="SELECT product.*,danhmuc.madanhmuc,danhmuc.tendanhmuc FROM product,danhmuc WHERE product.madanhmuc=danhmuc.madanhmuc ORDER BY product.id DESC LIMIT $startform,$post_page";
+				$sql="SELECT product.*,danhmuc.madanhmuc,danhmuc.tendanhmuc FROM product,danhmuc WHERE product.madanhmuc=danhmuc.madanhmuc ORDER BY product.masp DESC LIMIT $startform,$post_page";
 				$query=mysqli_query($conn,$sql);
 				while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
 			 ?>
 			<tr>
 				<td class="msp"><?php echo $row["masp"] ?></td>
-				<td><p><a style="width:100%; text-align:left;" href="../single.php?id=<?php echo $row['id'];?>"><?php echo $row["tensp"] ?></a></p></td>
+				<td><p><a style="width:100%; text-align:left;" href="../single.php?id=<?php echo $row['masp'];?>"><?php echo $row["tensp"] ?></a></p></td>
 				<td class="td-img"><img src="../images/sanpham/<?php echo $row['hinhanh'] ?>"></td>
 				<td><?php echo $row["tendanhmuc"] ?></td>
 				<td>
-					<a title="upload ảnh" href="uploads.php?id=<?php echo $row['id'];?>"><i class="fa fa-upload"></i></a>
-					<a title="sửa bài viết" href="edit-product.php?id=<?php echo $row['id'];?>"><i class="fa fa-edit"></i></a>
+					<a title="upload ảnh" href="uploads.php?id=<?php echo $row['masp'];?>"><i class="fa fa-upload"></i></a>
+					<a title="sửa bài viết" href="edit-product.php?id=<?php echo $row['masp'];?>"><i class="fa fa-edit"></i></a>
 					<form method="post">
-						<input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
+						<input type="hidden" name="delete" value="<?php echo $row['masp']; ?>">
 						<button style="margin-left:5px;" type="submit" class="trash" onclick="return confirm('Bạn muốn xóa sản phẩm không ?');"><i class="fa fa-trash"></i>
 					</form>
 				</td>

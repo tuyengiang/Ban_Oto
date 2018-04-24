@@ -51,7 +51,7 @@
 			<a href="dang-ky.php"><button class="btn-dang-nhap">Đăng ký</button></a>
 		</div><!--main-left-->
 		<div class="main-left"  style="margin-left:25px;width:45%;background:#f7f7f7;border-radius:0.3em;padding:1em;">
-			<p style="font-size:25px;padding:30px 0 10px 0;color:#333;"> Đăng nhập </p>
+			<p style="font-size:25px;padding:30px 0 10px 0;color:#333;">Đăng nhập</p>
 			<?php 
 				if(!empty($error_array["error"])){
 					echo "<font color='red'>".$error_array["error"]."</font>";

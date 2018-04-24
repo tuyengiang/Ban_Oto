@@ -11,7 +11,7 @@
 								$query=mysqli_query($conn,$sql);
 								while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
 							 ?>
-							<li><a href="list-category?id=<?php echo $row['id']; ?>"><?php echo $row['tendanhmuc']; ?></a></li>
+							<li><a href="list-category?id=<?php echo $row['madanhmuc']; ?>"><?php echo $row['tendanhmuc']; ?></a></li>
 							<?php endwhile; ?>
 						</ul>
 					</li>

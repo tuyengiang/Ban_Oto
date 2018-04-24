@@ -16,7 +16,6 @@
 		$tensp=$_POST["tensp"];
 		$noidung=mysqli_real_escape_string($conn,$_POST["noidung"]);
 		$giaban=$_POST["gia"];
-		$tomtat=mysqli_real_escape_string($conn,$_POST["tomtat"]);
 		$danhmuc=$_POST["madanhmuc"];
 		$hinhanh=$_FILES["hinhanh"]["name"];
 
@@ -52,8 +51,8 @@
 		}
 		if(empty($thongbao)){
 			if(move_uploaded_file($images_tmp,$path)){
-				$sql="INSERT INTO product (masp,tensp,giaban,tomtat,noidung,hinhanh,nguoidang,madanhmuc)
-					VALUES('{$masp}','{$tensp}','{$giaban}','{$tomtat}','{$noidung}','{$anh}','{$nguoidung}','{$danhmuc}')
+				$sql="INSERT INTO product (masp,tensp,giaban,noidung,hinhanh,nguoidang,madanhmuc)
+					VALUES('{$masp}','{$tensp}','{$giaban}','{$noidung}','{$anh}','{$nguoidung}','{$danhmuc}')
 				";
 				$query=mysqli_query($conn,$sql);
 				if($query){
@@ -97,10 +96,6 @@
 			<label>
 				<h4>Thông tin chi tiết</h4>
 				<textarea class="textarea_full" name="noidung" ></textarea>
-			</label>
-			<label>
-				<h4>Thông tin miêu tả</h4>
-				<textarea class="textarea_full" name="tomtat"></textarea>
 			</label>
 			
 		</div><!--main-right-left-->
