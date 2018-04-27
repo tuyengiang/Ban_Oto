@@ -19,11 +19,13 @@
 				$status=$row['trangthai'];
 				if($status=="1"){
 					$_SESSION["email"]=$email;
+					$_SESSION["status"]=$status;					
 					header('location:admin/admin.php');
 				}
 				else{
 					$_SESSION["email"]=$email;
-					header('location:user/user-info.php');
+					$_SESSION["status"]=$status;
+					header('location:user/user.php');
 				}
 			}
 		}
@@ -70,6 +72,11 @@
 				<label>
 					<h4>Mật khẩu</h4>
 					<input type="password" name="password" required="" placeholder="Mật khẩu" style="width:98%">
+				</label>
+				<br>
+				<br>
+				<label>
+					<a href="quen-mat-khau.php" class="question">Quên mật khẩu ?</a>
 				</label>
 				<br>
 				<input type="hidden" name="dang-nhap" value="dang-nhap">

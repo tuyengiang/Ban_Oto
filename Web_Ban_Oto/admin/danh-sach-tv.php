@@ -27,6 +27,10 @@
 			echo "<div class='mess'>".$mess."</div>";
 		}
 	 ?>
+	  <div class="menu-tab" style="border-radius:0;border-top-right-radius:0.5em;border-top-left-radius:0.5em;">
+		<a href="add-user.php"><i class="fa fa-plus"></i> Thêm thành viên</a>
+	</div><!--menu-tab-->
+
 	 <div style="clear:left"></div>
 	 <div class="tab-wrapper">
 	 	<ul class="tab">

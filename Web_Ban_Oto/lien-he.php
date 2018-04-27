@@ -7,6 +7,9 @@
 		$noidung=$_POST["noidung"];
 		$error_array=array();
 
+		if(validate_hoten_exits($hoten)){
+			$error_array["hoten"]="Họ tên chứa quá nhiều khoảng cách giữa các chữ !!!";
+		}
 		if(validate_email($email)){
 			$error_array["email"]="Email không hợp lê !!! Mời nhập lại.";
 		}
@@ -46,6 +49,11 @@
 						<input type="text" class="input-register" name="hoten" placeholder="Họ tên" required="">
 					</td>
 				</tr>
+				<?php 
+					if(!empty($error_array["hoten"])){
+								echo "<tr><td></td><td><p>".$error_array["hoten"]."</p></td></tr>";
+					}
+				?>
 				<tr>
 					<td class="td">Email *</td>
 					<td>

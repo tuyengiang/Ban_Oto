@@ -37,7 +37,7 @@
 <body>
 	<div class="header-top">
 		<div class="logo">
-			<p> <i class="fa fa-code"></i> Xin chào Admin</p>
+			<p><a href="admin.php" title="Trang quản trị"><i class="fa fa-code"></i> Xin chào Admin</a></p>
 		</div><!--logo-->
 		<div class="header-info">
 			<?php 
@@ -51,7 +51,7 @@
 			 ?>
 
 			 <ul>
-			 	<li><a href="#"><i class="fa fa-user"></i> <?php echo $row["hoten"]; ?></a>
+			 	<li><a href="admin.php"><i class="fa fa-user"></i> <?php echo $row["hoten"]; ?></a>
 					<ul class="sub-menu">
 						<li><a href="../"><i class="fa fa-home"></i> Xem trang web</a></li>
 						<li><a href="doimatkhau.php"><i class="fa fa-lock"></i> Đổi mật khẩu</a></li>

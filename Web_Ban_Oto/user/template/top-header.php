@@ -17,7 +17,7 @@
 											<li><a href='user/don-hang.php'>Đơn hàng của bạn</li>
 											<li><a href='user/info.php'>Thông tin của bạn</li>
 											<li><a href='user/doimatkhau.php'>Đổi mật khẩu</li>
-											<li><a href='admin/logout.php'>Đăng xuất</li>
+											<li><a href='../admin/logout.php'>Đăng xuất</li>
 										</ul>
 									</li>
 	

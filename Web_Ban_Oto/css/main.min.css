@@ -17,11 +17,12 @@ ul{
 	width:100%;height:40px;
 	background:black;
 }
-.logo{
+.logo a{
 	float:left;
 	color:white;
 	line-height:30px;
 	text-align:center;
+	font-size:18px;
 	width:12%;height:30px;padding-top:5px;
 }
 
@@ -72,7 +73,7 @@ ul{
 .main-left{
 	margin-top:40px;padding-top:10px;
 	position:fixed;z-index:1000000000;
-	width:16%;background:black;height:1000px;}
+	width:15%;background:black;height:1000px;}
 .main-left h1{
 	width:100%;height:50px;line-height:50px;font-size:18px;color:white;text-align:center;
 }
@@ -81,7 +82,6 @@ ul{
 	height:40px;
 	position:relative;
 	margin-top:10px;
-	border-left:3px solid #f7f7f7;
 }
 .main-left li a{
 	display:block;
@@ -124,10 +124,7 @@ ul{
 	margin:60px 0 10px 17%;
 }
 .main-right h1{
-	margin-top:5px 0 5px 0;
-	border-bottom:1px solid #ddd;
-	height:50px;
-	line-height:50px;
+	margin:10px 0 10px 0;
 }
 .main-right-left{
 	float:left;
@@ -137,7 +134,6 @@ ul{
 .main-right-right{
 	float:left;
 	width:28%;
-	height:1000px;
 	margin-left:10px;
 	margin-top:10px;
 
@@ -158,7 +154,18 @@ ul{
 	color:red;
 	font-size:13px;
 }
-
+.main-right .info-menu li{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	background:#f7f7f7;
+	padding-left:10px;
+}
+.main-right .info-menu{
+	display:block;
+	border-bottom-right-radius:0.5em;
+	border-bottom-left-radius:0.5em;
+}
 /**top-title**/
 .top-title{
 	width:100%;
@@ -168,7 +175,7 @@ ul{
 }
 .top-title li{
 	float:left;
-	width:15%;
+	width:30%;
 	height:50px;
 	line-height:50px;
 	text-align:center;
@@ -176,9 +183,9 @@ ul{
 .top-title li a{
 	display:block;
 	line-height:50px;
-	text-align:center;
+	text-align:left;
 	color:#333;
-	padding-left:3px;
+	padding-left:10px;
 }
 
 /**mess**/
@@ -193,6 +200,22 @@ ul{
 	border-radius:0.5em;
 }
 
+
+/**menu/-tab**/
+.menu-tab{
+	width:15%;
+	height:40px;
+	line-height:40px;
+	color:white;
+	text-align:center;
+	border-radius:0.5em;
+	background:#00CC66;margin:10px 0 10px 0;
+	float:right;
+}
+.menu-tab a{
+	display:block;
+	color:white;
+}
 /**tab*/
 .tab-wrapper{
 	width:100%;
@@ -237,6 +260,16 @@ ul{
 }
 .tab-warpper ul li.active a{
 	color:white;
+}
+/**quest-tion*/
+
+
+.question{
+	display:block;
+	margin:10px 0 10px 0;
+	height:40px;
+	color:#8080BB;
+	line-height:40px;
 }
 /****/
 textarea{
@@ -371,10 +404,12 @@ td a{
 	display:block;
 }
 .next li a:hover{
-	background:#eeeeee;
-	border-radius:1em;
+	background:#00CC66;
+	border-radius:50%;
+	color:white;
 }
 .next li a.active{
-	background:#f7f7f7;
-	border-radius:1em;
+	background:#00CC66;
+	border-radius:50%;
+		color:white;
 }

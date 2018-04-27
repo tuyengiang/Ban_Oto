@@ -46,7 +46,7 @@
 				$thongbao["hinhanh"]="Files ảnh kích thước quá lớn <4MB";
 			}
 		}
-		if(mysqli_num_rows(mysqli_query($conn,"SELECT masp FROM product WHERE masp='{$masp}"))>0){
+		if(mysqli_num_rows(mysqli_query($conn,"SELECT masp FROM product WHERE masp='{$masp}'"))>0){
 			$thongbao["error"]="Mã sản phẩm đã có !!! Mời nhập mã sản phẩm khác.";
 		}
 		if(empty($thongbao)){
@@ -70,7 +70,7 @@
 
 
 	<?php 
-			if(!empty($thongbao)){
+			if(!empty($thongbao["xacthuc"])){
 				echo " <div class='mess'><i class='fa fa-check'></i> ".$thongbao["xacthuc"]."</div>";
 			}
 		 ?>

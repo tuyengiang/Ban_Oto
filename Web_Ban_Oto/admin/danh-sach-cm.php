@@ -27,6 +27,9 @@
 			echo "<div class='mess'>".$mess."</div>";
 		}
 	 ?>
+	 <div class="menu-tab">
+		<a href="add-category.php"><i class="fa fa-plus"></i> Thêm danh mục</a>
+	</div><!--menu-tab-->
 	
 	 <table>
 		<thead>

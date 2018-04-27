@@ -2,8 +2,8 @@
 	<div class="menu">
 		<div class="menu-center">
 				<ul>
-					<li style="width:5%;"><a href="index.php"><i class="fa fa-home"></i></a></li>
-					<li><a href="gioi-thieu.php">Giới thiệu</a></li>
+					<li style="width:5%;"><a href="../index.php"><i class="fa fa-home"></i></a></li>
+					<li><a href="../gioi-thieu.php">Giới thiệu</a></li>
 					<li style="width:15%;"><a href="#">Sản phẩm  <i class="fa fa-angle-down"></i></a>
 						<ul class="sub-menu">
 							<?php 
@@ -11,7 +11,7 @@
 								$query=mysqli_query($conn,$sql);
 								while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
 							 ?>
-							<li><a href="list-category.php?id=<?php echo $row['madanhmuc']; ?>"><?php echo $row['tendanhmuc']; ?></a></li>
+							<li><a href="../list-category.php?id=<?php echo $row['madanhmuc']; ?>"><?php echo $row['tendanhmuc']; ?></a></li>
 							<?php endwhile; ?>
 						</ul>
 					</li>

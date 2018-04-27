@@ -20,7 +20,6 @@
 			if($check>0){
 				$thongbao["madanhmuc"]="Mã danh mục đã tồn tại !!!";
 			}
-
 			if(empty($thongbao)){
 				$sql="INSERT INTO danhmuc (madanhmuc,tendanhmuc)
 					VALUES('{$madanhmuc}','{$tendanhmuc}')

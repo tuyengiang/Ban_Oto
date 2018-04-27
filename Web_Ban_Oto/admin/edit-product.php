@@ -100,11 +100,6 @@
 				<h4>Thông tin chi tiết</h4>
 				<textarea class="textarea_full" name="noidung" ><?php echo $row['noidung'];?></textarea>
 			</label>
-			<label>
-				<h4>Thông tin miêu tả</h4>
-				<textarea class="textarea_full" name="tomtat"><?php echo $row['tomtat'] ?></textarea>
-			</label>
-			
 		</div><!--main-right-left-->
 		<div class="main-right-right">
 			<label>

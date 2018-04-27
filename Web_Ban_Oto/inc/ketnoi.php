@@ -21,6 +21,7 @@
 		return !preg_match($pattern,$email);
 	}
 
+	
 	function validate_phone($dienthoai){
 		$pattern="/^\+84[0-9]+|[0-9]+$/";
 		return !preg_match($pattern,$dienthoai);
@@ -33,16 +34,19 @@
 		return strlen($password)>6 ? true :false;
 	}
 
+	function validate_hoten_exits($hoten){
+		return strpos($hoten,"  ");
+	}
 	function hoten_exists($hoten){
 		return is_numeric($hoten);
 	}
 	function validate_strlen($password){
-		return strlen($password)<20 ? true :false;
+		return strlen($password)>16 ? true :false;
 	}
 
 	/**phan trang product admin **/
 
-	$post_page=5;
+	$post_page=6;
 	function get_page_admin_product(){
 		global $conn;
 		$sql="SELECT COUNT(masp) as total FROM product";
@@ -50,7 +54,5 @@
 		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
 		return $total["total"];
 	}
-	
 
-
- ?>
+?>

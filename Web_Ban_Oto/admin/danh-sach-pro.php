@@ -23,6 +23,15 @@
 		</ul>
 	</div><!--top-title-->
 	
+	<?php 
+		if(!empty($mess)){
+			echo "<div class='mess'>".$mess."</div>";
+		}
+	 ?>
+	<div class="menu-tab">
+		<a href="add-product.php"><i class="fa fa-plus"></i> Thêm sản phẩm</a>
+	</div><!--menu-tab-->
+
 	<table>
 		<thead>
 			

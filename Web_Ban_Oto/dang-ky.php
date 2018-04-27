@@ -10,6 +10,9 @@
 		$ngaysinh=$_POST["ngaysinh"];
 		$sex=$_POST["gioitinh"];
 		$error_array=array();
+		if(validate_hoten_exits($hoten)){
+			$error_array["hoten"]="Họ tên có quá nhiều khoảng cách giữa các chữ !!!";
+		}
 		if(is_numeric($hoten)){
 			$error_array["hoten"]="Họ tên bạn nhập phải là ký tự !!!";
 		}
@@ -23,10 +26,10 @@
 			$error_array["phone"]="Số điện phải đúng định dạng [0-9]";
 		}
 		if(strlen($phone)<9 || strlen($phone)>11){
-			$error_array["phone"]="Số điện thoại phải lớn hơn 9 và nhỏ hơn 11 ký tự !!!";
+			$error_array["phone"]="Số điện thoại phải lớn hơn 9 và nhỏ hơn 12 ký tự !!!";
 		}
-		if($password1!=$password2 || !validate_pasword($password1) ||!validate_strlen($password1)){
-			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc lớn hơn 6 và nhỏ hơn 20 ký tự !!!";
+		if($password1!=$password2 || !validate_password($password1) || validate_strlen($password1)){
+			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc lớn hơn 8 và nhỏ hơn 16 ký tự !!!";
 		}
 		if(empty($error_array)){
 				$email=mysqli_escape_string($conn,$email);
