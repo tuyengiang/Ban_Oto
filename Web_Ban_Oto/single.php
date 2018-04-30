@@ -35,7 +35,7 @@
 <div class="top-title">
 		<div class="top-title-center">
 			<ul>
-				<li><a href="/">Trang Chủ</a></li>
+				<li><a href="index.php">Trang Chủ</a></li>
 				<li style="width:3%;"><i class="fa fa-angle-right"></i></li>
 				<li style="width:30%;text-align:left;"><a href="dnag-ky.php"><?php echo $row["tensp"]; ?></a></li>
 			</ul>
@@ -69,7 +69,9 @@
 					</b>
 				</div>
 				
-				<button type="submit" class="btn-muahang">Đăng ký lái thử</button>
+				
+				<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button class="btn-mua" name="mua-hang"><i class="fa fa-car"></i> Đăng ký lái thử</button></a>
+						
 				
 			</div><!--main-left-cart-shop-->
 		</div><!--main-left-cart-->

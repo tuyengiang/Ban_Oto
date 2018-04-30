@@ -47,6 +47,11 @@
 
 	 ?>
 	<form method="post">
+		<?php 
+			$sql="SELECT email FROM taikhoan WHERE id='{$nguoidung}'";
+			$query=mysqli_query($conn,$sql);
+			$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
+		 ?>
 		<div class="main-right-left">
 			<label>
 				<h4> Email</h4>

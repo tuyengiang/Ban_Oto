@@ -55,4 +55,14 @@
 		return $total["total"];
 	}
 
+	/** phan trang san pham khach hang mua */
+
+	$postpage=3;
+	function get_post_user(){
+		global $conn;
+		$sql="SELECT COUNT(id) as total FROM cart";
+		$query=mysqli_query($conn,$sql);
+		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
+		return $total["total"];
+	}
 ?>

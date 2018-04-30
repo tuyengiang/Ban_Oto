@@ -57,7 +57,7 @@
 				<td class="msp"><?php echo $row["masp"] ?></td>
 				<td><p><a style="width:100%; text-align:left;" href="../single.php?id=<?php echo $row['masp'];?>"><?php echo $row["tensp"] ?></a></p></td>
 				<td class="td-img"><img src="../images/sanpham/<?php echo $row['hinhanh'] ?>"></td>
-				<td><?php echo $row["tendanhmuc"] ?></td>
+				<td><a style="width:100%; text-align:left;" href="../list-category.php?id=<?php echo $row['madanhmuc'] ?>"><?php echo $row["tendanhmuc"] ?></a></td>
 				<td>
 					<a title="upload ảnh" href="uploads.php?id=<?php echo $row['masp'];?>"><i class="fa fa-upload"></i></a>
 					<a title="sửa bài viết" href="edit-product.php?id=<?php echo $row['masp'];?>"><i class="fa fa-edit"></i></a>

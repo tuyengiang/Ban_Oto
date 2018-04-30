@@ -12,11 +12,11 @@
 							}
 							else{
 								echo"
-									<li style='width:100%;'><a style='padding-right:10px;' href='user/user.php'>Khách, ".$row["hoten"]."</a>
+									<li style='width:100%;'><a style='padding-left:50px;' href='user/user.php'>Khách, ".$row["hoten"]."</a>
 										<ul class='sub-login'>
-											<li><a href='user/don-hang.php'>Đơn hàng của bạn</li>
-											<li><a href='user/info.php'>Thông tin của bạn</li>
-											<li><a href='user/doimatkhau.php'>Đổi mật khẩu</li>
+											<li><a href='user/user.php'>Đơn hàng của bạn</li>
+											<li><a href='user/user.php'>Thông tin của bạn</li>
+											<li><a href='user/user.php'>Đổi mật khẩu</li>
 											<li><a href='admin/logout.php'>Đăng xuất</li>
 										</ul>
 									</li>

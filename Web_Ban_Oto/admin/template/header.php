@@ -54,6 +54,7 @@
 			 	<li><a href="admin.php"><i class="fa fa-user"></i> <?php echo $row["hoten"]; ?></a>
 					<ul class="sub-menu">
 						<li><a href="../"><i class="fa fa-home"></i> Xem trang web</a></li>
+						<li><a href="info.php"><i class="fa fa-user-o"></i> Thông tin tài khoản</a></li>
 						<li><a href="doimatkhau.php"><i class="fa fa-lock"></i> Đổi mật khẩu</a></li>
 						<li><a href="logout.php"><i class="fa fa-sign-out"></i>Đăng xuất</a></li>
 					</ul>

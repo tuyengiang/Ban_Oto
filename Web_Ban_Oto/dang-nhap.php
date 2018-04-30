@@ -23,9 +23,15 @@
 					header('location:admin/admin.php');
 				}
 				else{
-					$_SESSION["email"]=$email;
-					$_SESSION["status"]=$status;
-					header('location:user/user.php');
+					if(isset($_SESSION["cart"])){
+						$_SESSION["email"]=$email;
+						$_SESSION["status"]=$status;
+						header('location:cart/thanh-toan.php');
+					}else{
+						$_SESSION["email"]=$email;
+						$_SESSION["status"]=$status;
+						header('location:user/user.php');
+					}
 				}
 			}
 		}

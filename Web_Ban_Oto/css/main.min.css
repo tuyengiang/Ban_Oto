@@ -117,6 +117,21 @@ ul{
 	border-left:none;
 	margin-top:0;
 }
+
+/** main-left -info */
+.info-img{
+	width:60%;
+	height:120px;
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:20px;
+	border-radius:50%;
+}
+.info-img img{
+	width:100%;
+	border-radius:50%;
+	height:120px;
+}
 /**main-right**/
 .main-right{
 	width:80%;
@@ -353,6 +368,9 @@ thead{
 td{
 	padding-left:10px;
 }
+.td-img{
+	width:30%;
+}
 td a{
 	float:left;
 	height:30px;
@@ -381,6 +399,7 @@ td a{
 .msp{
 	width:5%;
 }
+/**next**/
 
 .next{
 	width:100%;

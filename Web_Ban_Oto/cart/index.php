@@ -1,17 +1,20 @@
 <?php $title="Giở hàng"; ?>
 <?php require_once("../user/template/header.php"); ?>
 <?php 
-		if(isset($_GET["cart"])){
-			$cart=array("product","cart");
-			if(in_array($_GET["cart"],$cart)){
-				$_cart=$_GET["cart"];
-			}else{
-				$_cart="product";
-			}
+	$id=$_GET["id"];
+	$_SESSION["cart"]=$id;
+
+	if(isset($_POST["mua"])){
+		$soluong=$_POST["soluong"];
+		$_SESSION["soluong"]=$soluong;
+		if(isset($_SESSION["email"])){
+			header("location:thanh-toan.php");
 		}else{
-			$_cart="product";
+			header('location:../dang-nhap.php');
 		}
-	 ?>
+	}
+ ?>
+	
 <?php require_once("../user/template/top-header.php"); ?>
 <?php require_once("../user/template/header-title.php") ?>
 <?php require_once("../user/template/menu.php"); ?>
@@ -19,15 +22,38 @@
 <div class="main">
 	<div class="title-list">
 			<div class="ti-td"><i class="fa fa-shopping-basket"></i> Sản phẩm bạn mua </div>
-			<div class="xem-them">
-						<a href="#">Xem thêm <i class="fa fa-angle-double-right"></i></a>
-			</div>
 	</div><!--title-->
-
-	<?php require_once($_page.".php"); ?>
-
 	
+	 <?php 
+	 	$sql="SELECT masp,hinhanh,tensp,giaban FROM product WHERE masp='{$id}'";
+	 	$query=mysqli_query($conn,$sql);
+	 	$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
+
+	  ?>
+	 <div class="hang-mua">
+		<div class="hang-mua-img">
+			<img src="../images/sanpham/<?php echo $row['hinhanh'];?>">
+
+		</div><!--img-->
+
+		<div class="hang-mua-title">
+			 <?php echo $row["tensp"]; ?>
+		</div><!--hang-mua-title-->
+		<form method="post">
+			<div class="hang-mua-soluong">
+					<input type="number" name="soluong" style="width:100%;border:1px solid #ddd;height:35px;text-align:center;font-size:20px;" value="1">
+			</div>
+			<div class="hang-mua-tuy-chon">
+				
+					<button type="submit" name="mua" class="btn-mua">Tiến hành mua hàng</button>
+				
+			</div>
+		</form>
+
+	 </div><!--hang-maua-->
+	<div style="clear:left;"></div>
 	
 </div><!--main-->
+
 
 <?php require_once("../user/template/bottom.php"); ?>

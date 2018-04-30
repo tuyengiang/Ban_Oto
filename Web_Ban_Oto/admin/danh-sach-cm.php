@@ -50,11 +50,13 @@
 				
 					<td>
 					
-						<a title="sửa chuyên mục" href="edit-category.php?id=<?php echo $row['madanhmuc'];?>"><i class="fa fa-edit"></i></a>
-						<form method="post">
+						<center>
+						<form style="width:30%;margin:auto" method="post">
+							<a title="sửa chuyên mục" style="margin-right:10px;" href="edit-category.php?id=<?php echo $row['madanhmuc'];?>"><i class="fa fa-edit"></i></a>
 							<input type="hidden" name="delete" value="<?php echo $row['madanhmuc']; ?>">
-							<button style="margin-left:5px;" type="submit" class="trash" onclick="return confirm('Bạn muốn xóa đanh mục không ?');"><i class="fa fa-trash"></i>
+							<button style="margin-left:5px;" type="submit" class="trash" onclick="return confirm('Bạn muốn xóa đanh mục không ?');"><i class="fa fa-trash"></i></button>
 						</form>
+					</center>
 				</td>
 				
 

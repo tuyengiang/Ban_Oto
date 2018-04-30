@@ -28,12 +28,18 @@
 					<li style="width:10%;"><a href="lien-he.php">Liên hệ</a></li>
 					<li style="width:5%;float:right;">
 						<i class="fa fa-shopping-basket"></i>
-						<ul class="sub-menu">
-							<li><a href="">San pham 1</a></li>
-							<li><a href="">San pham 1</a></li>
-							<li><a href="">San pham 1</a></li>
-							<li><a href="">San pham 1</a></li>
-							<li><a href="">San pham 1</a></li>
+						<ul class="sub-menu-1">
+							<?php 
+								if(isset($_SESSION["cart"]) && isset($_SESSION["soluong"])){
+								}
+
+
+							 ?>
+							<li>
+								<img src="img" >
+
+								<a href="">San pham 1</a>
+							</li>
 						</ul>
 					</li>
 					<li style="width:5%;float:right;" id="click-search">

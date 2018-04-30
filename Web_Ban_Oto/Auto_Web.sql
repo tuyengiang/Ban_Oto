@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2018 at 09:33 AM
+-- Generation Time: Apr 30, 2018 at 10:00 PM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.25-0ubuntu0.16.04.1
 
@@ -19,6 +19,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `Auto_Web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `masp` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `tensp` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `hinhanh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `soluong` int(11) NOT NULL,
+  `giaban` int(11) NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `masp`, `tensp`, `hinhanh`, `soluong`, `giaban`, `email`) VALUES
+(1, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangle@gmail.com'),
+(2, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangle@gmail.com'),
+(3, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangle@gmail.com'),
+(4, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'giangle@gmail.com'),
+(5, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangtuyen@gmail.com'),
+(6, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 1, 990000000, 'giangtuyen@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -154,7 +182,23 @@ INSERT INTO `hinhanh` (`id`, `id_sanpham`, `hinhanh`) VALUES
 (92, 'A21', 'IMG_19751-510x6001524536700.jpg'),
 (93, 'A22', 'Honda-City-Facelife-Left-Front-Three-Quarter-889501524536869.jpg'),
 (94, 'A22', 'Honda-City-Front-view-906811524536869.jpg'),
-(95, 'A22', 'Honda-City-Right-Rear-Three-Quarter-906831524536869.jpg');
+(95, 'A22', 'Honda-City-Right-Rear-Three-Quarter-906831524536869.jpg'),
+(96, 'A23', 'Honda-Jazz-Facelift-Exterior-1164651524537423.jpg'),
+(97, 'A23', 'Honda-Jazz-Facelift-Exterior-1164661524537423.jpg'),
+(98, 'A23', 'Honda-Jazz-Facelift-Exterior-1164671524537423.jpg'),
+(99, 'A23', 'Honda-Jazz-Facelift-Exterior-1164681524537423.jpg'),
+(100, 'A23', 'Honda-Civic-New-Exterior-905231524537598.jpg'),
+(101, 'A23', 'Honda-Civic-New-Exterior-905241524537598.jpg'),
+(102, 'A23', 'Honda-Civic-New-Exterior-905271524537598.jpg'),
+(103, 'A23', 'Honda-Civic-New-Rear-view-905261524537598.jpg'),
+(104, 'A24', 'Honda-Civic-New-Exterior-905231524537663.jpg'),
+(105, 'A24', 'Honda-Civic-New-Exterior-905241524537663.jpg'),
+(106, 'A24', 'Honda-Civic-New-Exterior-905271524537663.jpg'),
+(107, 'A24', 'Honda-Civic-New-Rear-view-905261524537664.jpg'),
+(108, 'A25', 'Honda-WRV-Exterior-1189561524538291.jpg'),
+(109, 'A25', 'Honda-WRV-Front-view-929841524538291.jpg'),
+(110, 'A25', 'Honda-WRV-Right-Front-Three-Quarter-929871524538291.jpg'),
+(111, 'A26', 'Honda-Amaze-New-Exterior-1203221524538807.jpg');
 
 -- --------------------------------------------------------
 
@@ -219,7 +263,15 @@ INSERT INTO `product` (`masp`, `tensp`, `giaban`, `noidung`, `hinhanh`, `nguoida
 ('A19', ' HONDA CRV 1.5 TURBO 2018', 958000000, '<p><span style="font-family: \'times new roman\', times, serif;">Ng&agrave;y 13/11, Honda ch&iacute;nh thức v&eacute;n m&agrave;n CR-V thế hệ thứ 5 với thiết kế thực dụng hơn, động cơ 1.5L turbo mới, nội thất sang trọng hơn với thiết kế 7&nbsp;chỗ.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style="font-family: \'times new roman\', times, serif;">Suốt thời gian Honda &ldquo;thai ngh&eacute;n&rdquo; CR-V thế hệ thứ 5, h&agrave;ng loạt nguồn tin dựa tr&ecirc;n c&aacute;c th&ocirc;ng số r&ograve; rỉ v&agrave; h&igrave;nh ảnh xe chạy thử cho rằng Honda CR-V ho&agrave;n to&agrave;n mới sẽ c&oacute; th&ecirc;m h&agrave;ng ghế thứ 3 &ndash; đồng nghĩa với việc mẫu crossover n&agrave;y sẽ c&oacute; th&ecirc;m lựa chọn 7 chỗ. Đ&acirc;y l&agrave; c&aacute;ch m&agrave; Hyundai &aacute;p dụng cho Santa Fe v&agrave; kh&aacute; th&agrave;nh c&ocirc;ng.</span></p>\r\n<p><span style="font-family: \'times new roman\', times, serif;">Tuy nhi&ecirc;n, những ai đang ng&oacute;ng chờ điều n&agrave;y đ&atilde; phải vỡ mộng khi h&atilde;ng xe Nhật Bản ch&iacute;nh thức giới thiệu phi&ecirc;n bản ho&agrave;n to&agrave;n mới thuộc thế hệ thứ 5 của CR-V tại thị trường Mỹ.</span></p>\r\n<p><span style="font-family: \'times new roman\', times, serif;">Sở dĩ Mỹ được chọn l&agrave; thị trường đầu ti&ecirc;n bởi ở nơi đ&acirc;y, Honda CR-V đang rất th&agrave;nh c&ocirc;ng. CR-V hiện l&agrave; xe Honda b&aacute;n chạy thứ 2 với tổng số gần 4 triệu chiếc b&aacute;n ra trong v&ograve;ng 2 thập kỷ qua, đồng thời dẫn đầu ph&acirc;n kh&uacute;c SUV cỡ nhỏ &ndash; nơi c&oacute; sự g&oacute;p mặt của&nbsp;Toyota RAV4, Subaru Forester, Chevrolet Equinox v&agrave; Ford Escape.</span></p>\r\n<p>&nbsp;</p>', 'crv_2018__zing1524536423.jpg', 12, 'h3'),
 ('A20', 'HONDA ACCORD 2.0AT 2018', 950000000, '<h3 class="title"><span style="font-family: \'times new roman\', times, serif;"><span style="font-size: 12pt;">Ch&iacute;nh v&agrave;o ng&agrave;y 25/12/2016 Một phi&ecirc;n bản thế hệ thứ 10 của honda accord được cho ra mắt tại triển l&atilde;m xe, với&nbsp;gi&aacute; honda accord&nbsp;được điều chỉnh cho ph&ugrave; hợp với mức t&agrave;i ch&iacute;nh của kh&aacute;ch h&agrave;ng n&ecirc;n mẫu xe n&agrave;y được kỳ vọng lớn mang chiếc xe mơ ước cho rất nhiều người.</span></span></h3>\r\n<p><span style="font-family: \'times new roman\', times, serif;"><span style="font-size: 12pt;"><span style="font-family: \'times new roman\', times, serif;">Sang trọng hơn, cuốn h&uacute;t hơn, vận h&agrave;nh tốt hơn v&agrave; được trang bị tốt ,&nbsp;<strong>Accord</strong>&nbsp;ho&agrave;n to&agrave;n mới mang đến niềm tự h&agrave;o về đẳng cấp, khẳng định vị thế v&agrave; phong c&aacute;ch ri&ecirc;ng biệt của chủ sở hữu.Thế hệ thứ 9 được coi l&agrave; biểu tượng tự h&agrave;o của&nbsp;<strong>Honda</strong>&nbsp;về độ bền bỉ, chất lượng v&agrave; sự tin cậy. Đ&oacute; l&agrave; sự kết hợp ho&agrave;n hảo của thiết kế th&ocirc;ng minh v&agrave; phong c&aacute;ch hiện đại, t&ocirc;n l&ecirc;n sự sang trọng v&agrave; tinh tế tuyệt đối trong ph&acirc;n kh&uacute;c.</span></span></span></p>', '6-31524536543.jpg', 12, 'h6'),
 ('A21', 'Honda City 2017', 500000000, '<p>Hotel: 09655656742</p>', 'IMG_1984-510x6001524536692.jpg', 12, 'h1'),
-('A22', 'Honda City Price', 990000000, '<p>Hotel :0965565742</p>', 'Honda-City-Front-view-906811524536860.jpg', 12, 'h1');
+('A22', 'Honda City Price', 990000000, '<p>Hotel :0965565742</p>', 'Honda-City-Front-view-906811524536860.jpg', 12, 'h1'),
+('A23', 'Honda Jazz Facelift', 853000000, '<pre id="tw-target-text" class="tw-data-text tw-ta tw-text-small" dir="ltr" style="text-align: left; height: 1200px;" data-placeholder="Bản dịch" data-fulltext=""><span lang="vi">Như đ&atilde; thấy tại Triển l&atilde;m &ocirc; t&ocirc; Frankfurt 2017, chiếc Honda Jazz mới được n&acirc;ng cấp b&ecirc;n ngo&agrave;i v&agrave; nội thất mới. Khoảng thời gian n&agrave;y, chiếc hatchback cao cấp cũng được trang bị c&aacute;c t&ugrave;y chọn động cơ xăng mới c&ugrave;ng với c&aacute;c thiết bị cải tiến cho tiện nghi s&aacute;ng tạo.\r\n\r\nĐộng cơ\r\n\r\nVề mặt cơ học, Jazz mới nhận được t&ugrave;y chọn động cơ xăng 1.5 l&iacute;t mới tạo ra 130bhp c&ugrave;ng với động cơ 1.2 l&iacute;t tạo ra 89bhp điện. Biến thể diesel sẽ tiếp tục được trang bị động cơ 1,5 l&iacute;t tạo ra 98bhp điện năng. Động cơ xăng sẽ c&oacute; sẵn trong t&ugrave;y chọn thủ c&ocirc;ng v&agrave; CVT 5 tốc độ, trong khi động cơ diesel sẽ bị giới hạn trong s&aacute;ch hướng dẫn s&aacute;u tốc độ.\r\n\r\nNgoại thất\r\n\r\nJazz mới dựa tr&ecirc;n ng&ocirc;n ngữ thiết kế mới nhất của gia đ&igrave;nh Honda, bao gồm kết hợp đ&egrave;n pha v&agrave; lưới tản nhiệt \'C&aacute;nh rắn\'. C&aacute;c cản trước cũng kh&aacute;c nhau với c&aacute;c đường n&eacute;t t&iacute;ch cực hơn xung quanh lỗ th&ocirc;ng hơi. Ở ph&iacute;a sau, c&aacute;c phần lưới tản nhiệt n&ocirc;ng hơn được li&ecirc;n kết với nhau bằng một dải cắt m&agrave;u đen b&oacute;ng ph&iacute;a tr&ecirc;n phần h&igrave;nh thang ph&iacute;a dưới. Tất cả trong tất cả, Jazz vẫn giữ hồ sơ giống như MPV của n&oacute;, do đ&oacute; l&agrave;m cho n&oacute; cực kỳ thiết thực v&agrave; rộng r&atilde;i.\r\n\r\nNội địa\r\n\r\nKhoảng thời gian n&agrave;y, chiếc Honda Jazz mới nhận được một mẫu h&igrave;nh sọc tr&ecirc;n ghế v&agrave; tay l&aacute;i bọc da v&agrave; n&uacute;m số, tất cả đều được tăng cường bằng c&aacute;c đường kh&acirc;u m&agrave;u da cam. Jazz giữ lại t&iacute;nh linh hoạt của m&ocirc; h&igrave;nh trước đ&oacute;, bao gồm cả một kh&ocirc;ng gian khởi động của 354 l&iacute;t (c&oacute; thể l&ecirc;n tới 897 l&iacute;t với ghế sau gập xuống) v&agrave; cấu h&igrave;nh Magic Seat để lưu trữ c&aacute;c vật phẩm cao.</span></pre>', 'Honda-Jazz-Facelift-Exterior-1164651524537411.jpg', 12, 'h2'),
+('A24', 'Honda City New', 990000000, '<pre id="tw-target-text" class="tw-data-text tw-ta tw-text-small" dir="ltr" style="text-align: left; height: 240px;" data-placeholder="Bản dịch" data-fulltext=""><span lang="vi">Sau th&agrave;nh phố, chiếc xe Honda được y&ecirc;u th&iacute;ch nhất ở Ấn Độ phải l&agrave; Civic. <br />Chiếc sedan thấp slung đầy kh&ocirc;ng gian giữa th&agrave;nh phố v&agrave; Accord v&agrave; ngay lập tức được y&ecirc;u th&iacute;ch trong số những người đam m&ecirc; với động cơ mạnh mẽ 1,8 l&iacute;t của n&oacute;.<br /> Với những chiếc xe chạy xăng hết thời trang v&agrave;o đầu thập kỷ, <br />Civic từ từ tự l&aacute;i v&agrave;o qu&ecirc;n l&atilde;ng.</span></pre>', 'Honda-Civic-New-Exterior-905241524537653.jpg', 12, 'h1'),
+('A25', 'Honda CR-V Price', 853000000, '<p>Hotel:0965565742</p>', 'Honda-WRV-Right-Front-Three-Quarter-929871524538283.jpg', 12, 'h3'),
+('A26', 'Honda City 2016', 500000000, '<p>Hotel : 0965565742</p>', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 12, 'h1'),
+('A27', 'Honda City 1.5 TOP', 599000000, '<p>&nbsp;</p>\r\n<p>Ra đời v&agrave;o năm 1996, qua hơn 20 năm ph&aacute;t triển, Honda City đ&atilde; trở th&agrave;nh một mẫu xe to&agrave;n cầu của Honda với gần 3.5 triệu xe được giao đến tay kh&aacute;ch h&agrave;ng tr&ecirc;n to&agrave;n cầu t&iacute;nh đến hết th&aacute;ng 4/2017.</p>\r\n<p>&nbsp;</p>\r\n<p>Ch&iacute;nh thức được giới thiệu đến thị trường Việt Nam từ th&aacute;ng 9/2014, City thế hệ 4 đ&atilde; rất th&agrave;nh c&ocirc;ng, l&agrave; một trong những xe sedan cỡ nhỏ b&aacute;n chạy nhất ph&acirc;n kh&uacute;c B với c&aacute;c gi&aacute; trị vượt trội về vận h&agrave;nh v&agrave; tiết kiệm nhi&ecirc;n liệu. Đặc biệt, năm 2016, City l&agrave; mẫu xe c&oacute; mức tăng trưởng về doanh số b&aacute;n v&agrave; thị phần cao nhất trong ph&acirc;n kh&uacute;c.</p>\r\n<p>Tiếp nối th&agrave;nh c&ocirc;ng, ng&agrave;y 19 th&aacute;ng 6 năm 2017, C&ocirc;ng ty Honda Việt Nam ch&iacute;nh thức giới thiệu <strong>City phi&ecirc;n bản mới 2017</strong>. Đ&acirc;y l&agrave; phi&ecirc;n bản đ&atilde; ra mắt rất th&agrave;nh c&ocirc;ng tại c&aacute;c thị trường Th&aacute;i Lan, Malaysia, Ấn Độ, Indonesia, Phillippines v&agrave; Australia.</p>\r\n<p><img src="images/sanphamnen1524497435.jpg" alt="" /></p>\r\n<p>Với &yacute; tưởng ph&aacute;t triển tổng thể <strong><em>&ldquo;Chiếc xe th&ocirc;ng minh mạnh mẽ vượt trội&rdquo;</em></strong>, <strong>City 2017</strong> tập trung v&agrave;o 3 yếu tố: <strong><em>Thiết kế cao cấp &ndash; Tiện &iacute;ch tối ưu &ndash; An to&agrave;n vượt trội</em></strong>, hướng tới c&aacute;c kh&aacute;ch h&agrave;ng trẻ trung, ưa th&iacute;ch sự năng động, hiện đại c&ugrave;ng sự tiện nghi v&agrave; an to&agrave;n tối đa.</p>', 'nen1524497540.jpg', 12, 'h1'),
+('A28', 'Honda-jazz V', 544000000, '<p><img src="https://hondaoto.com.vn/hondajazz/assets/img/exterior-bg.jpg" alt="" /></p>', 'exterior-bg1524498091.jpg', 12, 'h2'),
+('A29', 'Honda Odyssey 2018', 990000000, '<p>K&iacute;nh ch&agrave;o qu&yacute; kh&aacute;ch, qu&yacute; kh&aacute;ch đang t&igrave;m hiểu mẫu xe sedan<strong>&nbsp;Honda Odyssey 2018</strong></p>\r\n<p>&nbsp;</p>\r\n<p><strong>Odyssey</strong>&nbsp;l&agrave; một chiếc xe đa dụng cao cấp, sở hữu c&aacute;c t&iacute;nh năng an to&agrave;n h&agrave;ng đầu ph&acirc;n kh&uacute;c, cabin cao cấp tiện nghi v&agrave; tiết kiệm nhi&ecirc;n liệu vượt trội, Honda Việt Nam sẽ tạo n&ecirc;n một chuẩn mực mới cho ph&acirc;n kh&uacute;c MPV.</p>\r\n<p>&nbsp;</p>\r\n<p>Với nhiều năm kinh nghiệm trong ng&agrave;nh &ocirc; t&ocirc;, Mr Anh sẽ gi&uacute;p bạn chọn được chiếc&nbsp;xe ưng &yacute; nhất với&nbsp;<strong>MỨC GI&Aacute; TỐT NHẤT</strong>!&nbsp;H&atilde;y li&ecirc;n hệ ngay&nbsp;với Mr Anh để được tư vấn tốt nhất:&nbsp;<strong>0969887848</strong></p>', 'honda-odyssey11_11524530827.jpg', 12, 'h5'),
+('A30', 'HONDA JAZZ 1.5RS', 725000000, '<p>Hotel: 0965656742</p>', '2-41524534586.jpg', 12, 'h2');
 
 -- --------------------------------------------------------
 
@@ -235,6 +287,7 @@ CREATE TABLE `taikhoan` (
   `gioitinh` int(11) NOT NULL,
   `sodienthoai` int(11) NOT NULL,
   `ngaysinh` date NOT NULL,
+  `hinhanh` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `trangthai` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -242,15 +295,25 @@ CREATE TABLE `taikhoan` (
 -- Dumping data for table `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`id`, `email`, `hoten`, `matkhau`, `gioitinh`, `sodienthoai`, `ngaysinh`, `trangthai`) VALUES
-(11, 'nguyentheanh97@gmail.com', 'Nguyễn Thế Anh', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-04-04', 2),
-(12, 'nguyentuyengiangbn@gmail.com', 'Nguyễn Tuyển Giảng', '243079561a38e3d13383b8ea6bd444b5', 1, 965565742, '1997-10-24', 1),
-(13, 'phamquanghieu@gmail.com', 'Pham Quang Hieu', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-01-10', 1),
-(14, 'chiyeuminhem97@gmail.com', 'Nguyen The Anh', '768fcd9c676702d83aea952c948f9d07', 1, 1686130391, '1997-04-04', 1);
+INSERT INTO `taikhoan` (`id`, `email`, `hoten`, `matkhau`, `gioitinh`, `sodienthoai`, `ngaysinh`, `hinhanh`, `trangthai`) VALUES
+(11, 'nguyentheanh97@gmail.com', 'Nguyễn Thế Anh', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-04-04', '', 2),
+(12, 'nguyentuyengiangbn@gmail.com', 'Nguyễn Tuyển Giảng', '243079561a38e3d13383b8ea6bd444b5', 1, 965565742, '1997-10-24', 'nguoi_con_gai_toi_yeu1525057487.jpg', 1),
+(13, 'phamquanghieu@gmail.com', 'Pham Quang Hieu', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-01-10', '', 1),
+(14, 'tuyengiang97@gmail.com', 'Nguyễn Tuyển Giảng', '9cbf8a4dcb8e30682b927f352d6559a0', 1, 965565742, '1997-10-24', '', 2),
+(19, 'giangle@gmail.com', 'Truong Thi le', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', '', 2),
+(20, 'tuyengiang1005@gmail.com', 'Nguyen Tuyen Giang', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', '', 2),
+(21, 'tuyengiang1997@gmail.com', 'Giang dai ca', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-10-24', 'co-gai-toi-yeu1525058258.jpg', 1),
+(22, 'giangtuyen@gmail.com', 'Giảng Tuyển', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', NULL, 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `danhmuc`
@@ -287,10 +350,15 @@ ALTER TABLE `taikhoan`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `hinhanh`
 --
 ALTER TABLE `hinhanh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 --
 -- AUTO_INCREMENT for table `lienhe`
 --
@@ -300,7 +368,7 @@ ALTER TABLE `lienhe`
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

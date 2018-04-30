@@ -1,4 +1,5 @@
 <?php require_once('../inc/ketnoi.php'); ?>
+<?php check_login(); ?>
 <!DOCTYPE html>
 <html>
 <head>

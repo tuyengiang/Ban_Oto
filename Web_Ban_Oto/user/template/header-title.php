@@ -13,7 +13,7 @@
 <div class="header">
 		<div class="header-center">
 			<div class="header-center-logo">
-				<a href="index.php"><img src="../images/logo/logo.png"></a>
+				<a href="../index.php"><img src="../images/logo/logo.png"></a>
 			</div><!--header-center-logo-->
 
 			<div class="header-info">

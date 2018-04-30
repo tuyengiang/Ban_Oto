@@ -80,7 +80,7 @@
 									
 						</div><!--content-cảt-->
 						<div class="content-button">
-							<button class="btn-mua"><i class="fa fa-cart-plus"></i> Mua ngay</button>
+							<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button class="btn-mua" name="mua-hang"><i class="fa fa-car"></i> Đăng ký lái thử</button></a>
 						</div><!--content-button-->
 					</div><!--content-excerpt-->
 				</div><!--content-->

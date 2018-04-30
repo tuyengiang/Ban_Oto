@@ -1,4 +1,18 @@
 <div class="main-left">
+			<div class="info-img">
+				<?php 
+					$sql="SELECT hinhanh FROM taikhoan WHERE id='{$nguoidung}'";
+					$query=mysqli_query($conn,$sql);
+					$row=mysqli_fetch_array($query,MYSQLI_ASSOC);
+					if(empty($row["hinhanh"])){
+						echo '<a href="info.php"><img src="../images/images-user/admin.jpg"></a>';
+					}else{
+						echo '<a href="info.php"><img src="../images/images-user/'.$row["hinhanh"].'"></a>';
+					}
+				 ?>
+				
+			
+			</div>
 			<ul>
 				<li><i class="fa fa-comments"></i><a href="hom-thu.php">Hòm thư</a></li>
 				<li><i class="fa fa-plus"></i><a href="add-product.php">Thêm <i style="float:right;padding-right:30px;" class="fa fa-angle-down"></i></a>
