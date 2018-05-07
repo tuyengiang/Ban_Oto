@@ -14,14 +14,13 @@
 		}
 	}
  ?>
-	
 <?php require_once("../user/template/top-header.php"); ?>
 <?php require_once("../user/template/header-title.php") ?>
 <?php require_once("../user/template/menu.php"); ?>
 
 <div class="main">
 	<div class="title-list">
-			<div class="ti-td"><i class="fa fa-shopping-basket"></i> Sản phẩm bạn mua </div>
+			<div class="ti-td"><i class="fa fa-shopping-basket"></i> Xe bạn đặt </div>
 	</div><!--title-->
 	
 	 <?php 
@@ -37,7 +36,7 @@
 		</div><!--img-->
 
 		<div class="hang-mua-title">
-			 <?php echo $row["tensp"]; ?>
+			 <a href="../single.php?id=<?php echo $row["masp"]; ?>"><?php echo $row["tensp"]; ?></a>
 		</div><!--hang-mua-title-->
 		<form method="post">
 			<div class="hang-mua-soluong">
@@ -45,7 +44,7 @@
 			</div>
 			<div class="hang-mua-tuy-chon">
 				
-					<button type="submit" name="mua" class="btn-mua">Tiến hành mua hàng</button>
+					<button type="submit" name="mua" class="btn-mua">Tiến hành đặt xe</button>
 				
 			</div>
 		</form>

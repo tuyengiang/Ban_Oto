@@ -23,7 +23,7 @@
 					header('location:admin/admin.php');
 				}
 				else{
-					if(isset($_SESSION["cart"])){
+					if(isset($_SESSION["cart"]) && isset($_SESSION["soluong"]) ){
 						$_SESSION["email"]=$email;
 						$_SESSION["status"]=$status;
 						header('location:cart/thanh-toan.php');

@@ -144,7 +144,7 @@
 					<td class="td"></td>
 					<td>
 						<input type="hidden" name="dang-ky" value="dang-ky">
-						<button type="submit" class="btn-dang-nhap" name="dang-ky">Đăng ký</button>
+						<button style="width:30%;" type="submit" class="btn-dang-nhap" name="dang-ky">Đăng ký</button>
 					</td>
 				</tr>
 	

@@ -35,7 +35,7 @@
 	}
 
 	function validate_hoten_exits($hoten){
-		return strpos($hoten,"  ");
+		return strpos($hoten,"  "); /// ktra nhap nhieu khoang cach qua
 	}
 	function hoten_exists($hoten){
 		return is_numeric($hoten);

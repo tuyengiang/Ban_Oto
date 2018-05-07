@@ -70,8 +70,8 @@
 				</div>
 				
 				
-				<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button class="btn-mua" name="mua-hang"><i class="fa fa-car"></i> Đăng ký lái thử</button></a>
-						
+				<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button style="width:50%;" class="btn-mua" name="mua-hang"><i class="fa fa-car"></i> Đăng ký lái thử</button></a>
+				
 				
 			</div><!--main-left-cart-shop-->
 		</div><!--main-left-cart-->

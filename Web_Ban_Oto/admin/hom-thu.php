@@ -44,10 +44,10 @@
 				<td><?php echo $row["hoten"]; ?></td>
 				<td><?php echo $row["email"]; ?></td>
 				<td><?php echo $row["noidung"]; ?></td>
-				<td>
+				<td style="width:6%;">
 					<form method="post">
 						<input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
-						<center><button type="submit" class="trash" onclick="return confirm('Bạn muốn xóa đóng góp không ?');"><i class="fa fa-trash"></i></button></center>
+						<center><button type="submit" class="trash" onclick="return confirm('Bạn muốn xóa thư đóng góp không ?');"><i class="fa fa-trash"></i></button></center>
 					</form>
 				</td>
 

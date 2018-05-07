@@ -402,10 +402,12 @@ td a{
 /**next**/
 
 .next{
-	width:100%;
+	width:99%;
 	height:40px;
 	margin-top:10px;
-	border-radius:1.5em;
+	background:#eeeeee;
+	border-radius:1em;
+	padding:0.5em;
 }
 .next li{
 	width:40px;
@@ -416,6 +418,7 @@ td a{
 	border:1px solid #ddd;
 	border-radius:1.5em;
 	color:black;
+	background:white;
 	margin-left:5px;
 }
 .next li a{

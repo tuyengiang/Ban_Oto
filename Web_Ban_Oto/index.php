@@ -27,7 +27,6 @@
 			</div><!--main-left-qc-->
 		</div><!--main-left-->
 		<?php require_once("template/main.php"); ?>
-		
 	
 	</div><!--main-->
 	<?php require_once('template/bottom.php'); ?>
