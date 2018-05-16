@@ -1,8 +1,8 @@
 <div class="search">
 	
 	<div class="search-content">
-		<form method="GET" class="form-search">
-			<input type="search" name="search" placeholder="Bạn nhập tên xe hoặc hãng xe...">
+		<form method="GET" class="form-search" action="search.php">
+			<input type="search" name="search" placeholder="Bạn nhập tên xe hoặc hãng xe..." required="">
 			<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
 			<i class="fa fa-times" id="exit"></i>
 		</form>

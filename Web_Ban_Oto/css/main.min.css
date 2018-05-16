@@ -96,7 +96,7 @@ ul{
 	width:20%;
 	text-align:center;color:white;
 }
-.main-left li > .sub-menu{
+.main-left li> .sub-menu{
 	display:none;
 	position:absolute;
 	z-index:10000000000000;

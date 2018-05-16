@@ -7,7 +7,7 @@
 
 			<form method="post" class="form-lh">
 				Đăng ký nhận tin
-				<input type="email" name="email" placeholder="Email....">
+				<input type="email" name="email" placeholder="Email...." required="">
 				<button class="btn-lh" type="submit"><i class="fa fa-envelope"></i> Đăng ký</button>
 			</form>
 		</div><!--form-lienhe-->

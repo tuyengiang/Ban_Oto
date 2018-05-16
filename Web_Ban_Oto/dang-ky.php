@@ -137,7 +137,7 @@
 				<tr>
 					<td class="td"></td>
 					<td>
-						<input type="checkbox" name="checkbox"> Bạn đồng ý với <a href="#">Điều khoản của chúng tôi</a>
+						<input type="checkbox" name="checkbox" checked=""> Bạn đồng ý với <a href="#">Điều khoản của chúng tôi</a>
 					</td>
 				</tr>
 				<tr>

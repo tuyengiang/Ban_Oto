@@ -57,7 +57,7 @@
 				<tr>
 					<td class="td">Email *</td>
 					<td>
-						<input type="text" class="input-register" name="email" placeholder="Email" required="">
+						<input type="text" class="input-register" name="email" placeholder="Email" required="" value="<?php if(isset($_SESSION["email"])){ echo $_SESSION["email"];}else{echo "";}   ?>">
 					</td>
 				</tr>
 				<?php 
@@ -80,7 +80,7 @@
 					<td class="td"></td>
 					<td>
 					
-						<button type="submit" class="btn-dang-nhap" name="lien-he">Gửi liên hệ</button>
+						<button type="submit" class="btn-dang-nhap" name="lien-he" style="width:30%;">Gửi liên hệ</button>
 					</td>
 				</tr>
 				

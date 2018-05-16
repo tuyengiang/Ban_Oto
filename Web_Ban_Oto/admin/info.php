@@ -65,7 +65,7 @@
 						 echo "Nữ";
 				 ?>
 		</li>
-		<li><i class="fa fa-yelp"></i> Số điện thoại: <?php echo $row["sodienthoai"]; ?></li>
+		<li><i class="fa fa-yelp"></i> Số điện thoại: 0<?php echo $row["sodienthoai"]; ?></li>
 		<li><i class="fa fa-yelp"></i> Ngày sinh: <?php echo $row["ngaysinh"]; ?></li>
 	</ul>
 

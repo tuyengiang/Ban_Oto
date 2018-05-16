@@ -377,6 +377,9 @@ body{
 .category-left-bars ul li.active-1 a{
 	color:black;
 }
+.category-left-bars ul li.active-1 a:hover{
+	color:white;
+}
 /**category-right**/
 
 .cate-new{
@@ -484,6 +487,11 @@ body{
 	width:100%;
 	margin-top:10px;
 	clear:left;
+}
+.category-left-qc{
+	width:100%;
+	margin-top:10px;
+	background:#f7f7f7;
 }
 .main-left-cart{
 	width:100%;
@@ -815,8 +823,12 @@ input[type="radio"]{
 	padding-left:15px;
 
 }
-option{
-	display:block;
+select{
+	width:95%;
+	margin:10px 10px 10px 5px;
+	height:40px;
+}
+select option{
 	background:#333;
 	color:white;
 }

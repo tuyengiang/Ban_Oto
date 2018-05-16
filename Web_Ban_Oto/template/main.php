@@ -18,7 +18,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">
@@ -62,7 +62,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">
@@ -106,7 +106,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">
@@ -150,7 +150,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">
@@ -194,7 +194,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">
@@ -238,7 +238,7 @@
 				 ?>
 				<div class="content">
 					<div class="content-img">
-						<img src="images/sanpham/<?php echo $row['hinhanh']; ?>">
+						<a href="single.php?id=<?php echo $row['masp']; ?>"><img src="images/sanpham/<?php echo $row['hinhanh']; ?>"></a>
 					</div><!--content-img-->
 
 					<div class="content-excerpt">

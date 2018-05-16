@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2018 at 10:00 PM
--- Server version: 5.7.21-0ubuntu0.16.04.1
--- PHP Version: 7.0.25-0ubuntu0.16.04.1
+-- Generation Time: May 16, 2018 at 09:27 AM
+-- Server version: 5.7.22-0ubuntu0.16.04.1
+-- PHP Version: 7.0.30-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -46,7 +46,11 @@ INSERT INTO `cart` (`id`, `masp`, `tensp`, `hinhanh`, `soluong`, `giaban`, `emai
 (3, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangle@gmail.com'),
 (4, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'giangle@gmail.com'),
 (5, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangtuyen@gmail.com'),
-(6, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 1, 990000000, 'giangtuyen@gmail.com');
+(6, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 1, 990000000, 'giangtuyen@gmail.com'),
+(7, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangtuyen@gmail.com'),
+(8, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangtuyen@gmail.com'),
+(9, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com'),
+(10, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -198,7 +202,8 @@ INSERT INTO `hinhanh` (`id`, `id_sanpham`, `hinhanh`) VALUES
 (108, 'A25', 'Honda-WRV-Exterior-1189561524538291.jpg'),
 (109, 'A25', 'Honda-WRV-Front-view-929841524538291.jpg'),
 (110, 'A25', 'Honda-WRV-Right-Front-Three-Quarter-929871524538291.jpg'),
-(111, 'A26', 'Honda-Amaze-New-Exterior-1203221524538807.jpg');
+(111, 'A26', 'Honda-Amaze-New-Exterior-1203221524538807.jpg'),
+(112, 'A30', 'nguoi_con_gai_toi_yeu1525418204.jpg');
 
 -- --------------------------------------------------------
 
@@ -297,7 +302,7 @@ CREATE TABLE `taikhoan` (
 
 INSERT INTO `taikhoan` (`id`, `email`, `hoten`, `matkhau`, `gioitinh`, `sodienthoai`, `ngaysinh`, `hinhanh`, `trangthai`) VALUES
 (11, 'nguyentheanh97@gmail.com', 'Nguyễn Thế Anh', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-04-04', '', 2),
-(12, 'nguyentuyengiangbn@gmail.com', 'Nguyễn Tuyển Giảng', '243079561a38e3d13383b8ea6bd444b5', 1, 965565742, '1997-10-24', 'nguoi_con_gai_toi_yeu1525057487.jpg', 1),
+(12, 'nguyentuyengiangbn@gmail.com', 'Nguyễn Tuyển Giảng', '243079561a38e3d13383b8ea6bd444b5', 1, 965565742, '1997-10-24', 'nguoi_con_gai_toi_yeu1525748086.jpg', 1),
 (13, 'phamquanghieu@gmail.com', 'Pham Quang Hieu', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-01-10', '', 1),
 (14, 'tuyengiang97@gmail.com', 'Nguyễn Tuyển Giảng', '9cbf8a4dcb8e30682b927f352d6559a0', 1, 965565742, '1997-10-24', '', 2),
 (19, 'giangle@gmail.com', 'Truong Thi le', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', '', 2),
@@ -353,12 +358,12 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `hinhanh`
 --
 ALTER TABLE `hinhanh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 --
 -- AUTO_INCREMENT for table `lienhe`
 --
