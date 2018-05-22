@@ -964,7 +964,7 @@ td p{
 }
 .hang-mua-title{
 	float:left;
-	width:50%;height:100px;
+	width:30%;height:100px;
 	line-height:100px;
 	text-align:center;
 	color:#ff5c00;
@@ -979,7 +979,7 @@ td p{
 	margin-top:20px;
 }
 .hang-mua-tuy-chon{
-	float:left;
+	float:right;
 	width:20%;
 	height:40px;
 	margin-left:30px;

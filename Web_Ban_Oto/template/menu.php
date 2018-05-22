@@ -27,20 +27,8 @@
 					<li><a href="#">Tin tức</a></li>
 					<li style="width:10%;"><a href="lien-he.php">Liên hệ</a></li>
 					<li style="width:5%;float:right;">
-						<i class="fa fa-shopping-basket"></i>
-						<ul class="sub-menu-1">
-							<?php 
-								if(isset($_SESSION["cart"]) && isset($_SESSION["soluong"])){
-								}
-
-
-							 ?>
-							<li>
-								<img src="img" >
-
-								<a href="">San pham 1</a>
-							</li>
-						</ul>
+						<i class="fa fa-heart"></i>
+					
 					</li>
 					<li style="width:5%;float:right;" id="click-search">
 						<i class="fa fa-search"></i>

@@ -8,7 +8,10 @@
 		$password2=$_POST["matkhau1"];
 		$phone=$_POST["dienthoai"];
 		$ngaysinh=$_POST["ngaysinh"];
+		$thangsinh=$_POST["thangsinh"];
+		$namsinh=$_POST["namsinh"];
 		$sex=$_POST["gioitinh"];
+		$brithday=$namsinh."-".$thangsinh."-".$ngaysinh;
 		$error_array=array();
 		if(validate_hoten_exits($hoten)){
 			$error_array["hoten"]="Họ tên có quá nhiều khoảng cách giữa các chữ !!!";
@@ -31,13 +34,20 @@
 		if($password1!=$password2 || !validate_password($password1) || validate_strlen($password1)){
 			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc lớn hơn 8 và nhỏ hơn 16 ký tự !!!";
 		}
+		if(is_numeric($ngaysinh)<1 && is_numeric($ngaysinh)>31){
+			$error_array["ngaysinh"]="Ngày sinh bạn nhập phải từ 1 đến 31 !!!";
+		}
+		if($thangsinh<1 && $thangsinh>12){
+			$error_array["thangsinh"]="Tháng sinh bạn nhập phải từ 1 đến 12 !!!";
+		}
+
 		if(empty($error_array)){
 				$email=mysqli_escape_string($conn,$email);
 				$hoten=mysqli_escape_string($conn,$hoten);
 				$pass=mysqli_escape_string($conn,md5($password1));
 				$phone=mysqli_escape_string($conn,$phone);
 				$sql="INSERT INTO taikhoan(email,hoten,matkhau,gioitinh,sodienthoai,ngaysinh,trangthai)
-					VALUES('{$email}','{$hoten}','{$pass}','{$sex}','{$phone}','{$ngaysinh}',2)
+					VALUES('{$email}','{$hoten}','{$pass}','{$sex}','{$phone}','{$brithday}',2)
 				";
 				$query=mysqli_query($conn,$sql);
 				if($query){
@@ -90,9 +100,45 @@
 				<tr>
 					<td class="td">Ngày sinh *</td>
 					<td>
-						<input type="date" class="input-register" name="ngaysinh" placeholder="Email" required="">
+						<select name="ngaysinh" style="width:8%;height:33px;border:1px solid #f7f7f7;background:white;border-radius:0.3em;">
+							<?php 
+								for($i=1;$i<31;$i++):
+							 ?>
+
+							<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+							<?php endfor; ?>
+			
+						</select>
+						/ 
+						<select name="thangsinh" style="width:8%;height:33px;border:1px solid #f7f7f7;background:white;border-radius:0.3em;">
+							<?php 
+								for($i=1;$i<12;$i++):
+							 ?>
+
+							<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+							<?php endfor; ?>
+			
+						</select>
+						/
+						<select name="namsinh" style="width:8%;height:33px;border:1px solid #f7f7f7;background:white;border-radius:0.3em;">
+							<?php 
+								for($i=1950;$i<DATE('Y');$i++):
+							 ?>
+
+							<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+							<?php endfor; ?>
+			
+						</select>
 					</td>
 				</tr>
+				<?php 
+					if(!empty($error_array["ngaysinh"])){
+								echo "<tr><td></td><td><p>".$error_array["ngaysinh"]."</p></td></tr>";
+					}
+					else if(!empty($error_array["thangsinh"])){
+								echo "<tr><td></td><td><p>".$error_array["thangsinh"]."</p></td></tr>";
+					}
+				?>
 				<tr>
 					<td class="td">Điện thoại *</td>
 					<td>

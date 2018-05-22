@@ -54,10 +54,22 @@
 		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
 		return $total["total"];
 	}
+	function get_cat_admin_product(){
+		global $conn;
+		$sql="SELECT COUNT(id) as total FROM cart  WHERE check_cart='1'";
+		$query=mysqli_query($conn,$sql);
+		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
+		return $total["total"];
+	}
+	function get_cat1_admin_product(){
+		global $conn;
+		$sql="SELECT COUNT(id) as total FROM cart  WHERE check_cart='0'";
+		$query=mysqli_query($conn,$sql);
+		$total=mysqli_fetch_array($query,MYSQLI_ASSOC);
+		return $total["total"];
+	}
 
 	/** phan trang san pham khach hang mua */
-
-	$postpage=3;
 	function get_post_user(){
 		global $conn;
 		$sql="SELECT COUNT(id) as total FROM cart";

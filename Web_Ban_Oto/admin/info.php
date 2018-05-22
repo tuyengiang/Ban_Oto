@@ -10,7 +10,7 @@
 		$size=$_FILES["hinhanh"]["size"];
 		$explode=explode(".",$name);
 		$ext=end($explode);
-		$path="/var/www/html/Web_Ban_Oto/images/images-user/";
+		$path="/var/www/html/Ban_Oto/Web_Ban_Oto/images/images-user/";
 		$path=$path.basename($explode[0].time().".".$ext);
 		$anh=basename($explode[0].time().".".$ext);
 		$thongbao=array();

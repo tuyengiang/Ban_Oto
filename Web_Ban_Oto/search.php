@@ -3,30 +3,15 @@
 <?php require_once("template/header-title.php") ?>
 <?php require_once("template/menu.php"); ?>
 <?php 
-	if(isset($_GET["search"])){
-		$search=$_GET["search"];
+	if(isset($_GET["tim-kiem"])){
+		if(isset($_GET["search"])){
+			$search=$_GET["search"];
+		}
 	}
  ?>
 
 <div class="main">
-	<div class="category-left">
-			<div class="category-left-bars">
-				<div class="title"><i class="fa fa-bars"></i> Danh mục hãng xe</div>
-				<ul>
-					<?php 
-						$sql="SELECT * FROM danhmuc";
-						$query=mysqli_query($conn,$sql);
-						while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
-					 ?>
-					 
-						<li class="active-1"><a href="list-category.php?id=<?php echo $row["madanhmuc"]; ?>"><i class="fa fa-angle-right"></i> <?php echo $row['tendanhmuc']; ?></a></li>
-
-					
-					<?php endwhile; ?>
-					
-				</ul>
-			</div>
-	</div><!--main-left-category-->
+	<?php require_once("template/main-left.php"); ?>
 	<div class="category-right">
 			
 			

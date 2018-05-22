@@ -27,10 +27,8 @@
 					<li><a href="#">Tin tức</a></li>
 					<li style="width:10%;"><a href="../lien-he.php">Liên hệ</a></li>
 					<li style="width:5%;float:right;">
-						<i class="fa fa-shopping-basket"></i>
-						<ul class="sub-menu-1">
-							<li></li>
-						</ul>
+						<i class="fa fa-heart"></i>
+					
 					</li>
 					<li style="width:5%;float:right;" id="click-search">
 						<i class="fa fa-search"></i>

@@ -28,7 +28,7 @@
 		$images_type=$_FILES["hinhanh"]["type"];
 		$explode=explode(".",$images);
 		$ext=end($explode);
-		$path="/var/www/html/Web_Ban_Oto/images/sanpham/";
+		$path="/var/www/html/Ban_Oto/Web_Ban_Oto/images/sanpham/";
 		$path=$path.basename($explode[0].time().".".$ext);
 		$thongbao=array();
 		$anh=basename($explode[0].time().".".$ext);

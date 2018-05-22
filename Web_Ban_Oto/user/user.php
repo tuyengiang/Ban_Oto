@@ -3,6 +3,18 @@
 <?php require_once("template/top-header.php"); ?>
 <?php require_once("template/header-title.php") ?>
 <?php require_once("template/menu.php"); ?>
+<?php 
+	if(isset($_POST["delete"])){
+		$id=$_POST["delete"];
+		$sql="DELETE FROM cart WHERE id='{$id}'";
+		$query=mysqli_query($conn,$sql);
+		if($query){
+			echo "<script>alert('Hủy thành công !!!');</script>";
+		}else{
+			echo "<script>alert('Hủy không thành công !!!');</script>";
+		}
+	}
+ ?>
 <div class="main">
 	<div class="category-left">
 			<div class="category-left-bars">
@@ -31,10 +43,10 @@
 
 				 	$page=empty($_GET["page"]) ? 1 :($_GET["page"]);
 				 	$post=get_post_user();
-				 	$startform=($page-1)*$postpage;
-				 	$totalpage=round($post/$postpage);
+				 	$startform=($page-1)*$post_page;
+				 	$totalpage=round($post/$post_page);
 
-				 	$sql="SELECT taikhoan.email as temail,cart.* FROM cart,taikhoan WHERE taikhoan.email=cart.email AND cart.email='{$_SESSION['email']}' LIMIT $startform,$postpage";
+				 	$sql="SELECT taikhoan.email as temail,cart.* FROM cart,taikhoan WHERE taikhoan.email=cart.email AND cart.email='{$_SESSION['email']}' ORDER BY id DESC LIMIT $startform,$post_page";
 				 	$query=mysqli_query($conn,$sql);
 				 	while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
 
@@ -51,7 +63,32 @@
 					<div class="hang-mua-soluong" style="line-height:40px;margin-top:28px;">
 						X <?php echo $row["soluong"]; ?>
 					</div>
-					<div class="hang-mua-tuy-chon" style="line-height:40px;margin-top:28px;">Đã gửi hàng</div>
+					<div class="hang-mua-tuy-chon" style="line-height:40px;margin-top:28px;">
+							<?php 
+								if($row["check_cart"]=="0"){
+									echo "Đang xử lý";
+								}else{
+									echo "Đã xử lý";
+								}
+							 ?>		
+
+							 <?php 
+							 	if($row["check_cart"]=="1"){
+							 		echo "";
+							 	}else{
+
+
+
+							  ?>	
+
+							  <form method="post" style="display:inline;margin-left:10px;">
+							 		<input type="hidden" name="delete" value="<?php echo $row['id'];?>">
+									<button type="submit" onclick="return confirm('Bạn muốn hủy đơn hàng !!!');" style="width:40px;background:white;color:#26aa67;" class="btn-mua">Hủy</button>
+							</form>	
+							<?php } ?>	
+	
+
+					</div>
 	
 					
 

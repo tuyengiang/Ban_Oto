@@ -3,7 +3,7 @@
 	<div class="search-content">
 		<form method="GET" class="form-search" action="search.php">
 			<input type="search" name="search" placeholder="Bạn nhập tên xe hoặc hãng xe..." required="">
-			<button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+			<button type="submit" class="btn-search" name="tim-kiem"><i class="fa fa-search"></i></button>
 			<i class="fa fa-times" id="exit"></i>
 		</form>
 	</div>

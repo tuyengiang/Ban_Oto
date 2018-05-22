@@ -27,24 +27,7 @@
 <?php require_once("template/header-title.php") ?>
 <?php require_once("template/menu.php"); ?>
 	<div class="main">
-		<div class="category-left">
-			<div class="category-left-bars">
-				<div class="title"><i class="fa fa-bars"></i> Danh mục hãng xe</div>
-				<ul>
-					<?php 
-						$sql="SELECT * FROM danhmuc";
-						$query=mysqli_query($conn,$sql);
-						while($row=mysqli_fetch_array($query,MYSQLI_ASSOC)):
-					 ?>
-					<li class='active-1'><a href="list-category.php?id=<?php echo $row['madanhmuc']; ?>"><i class="fa fa-angle-right"></i> <?php echo $row['tendanhmuc']; ?></a></li>
-					<?php endwhile; ?>
-					
-				</ul>
-			</div><!--main-left-category-->
-			<div class="category-left-qc">
-
-			</div><!--main-left-qc-->
-		</div><!--main-left-->
+		<?php require_once("template/main-left.php"); ?>
 		<div class="category-right">
 			<div class="cate-new">
 				<div class="title-list">
@@ -80,7 +63,8 @@
 									
 						</div><!--content-cảt-->
 						<div class="content-button">
-							<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button class="btn-mua" name="mua-hang"><i class="fa fa-car"></i> Đăng ký lái thử</button></a>
+							<a href="cart/index.php?id=<?php echo $row['masp'];?>"><button class="btn-mua" name="mua-hang" style="width:50%;"><i class="fa fa-car"></i> Đặt xe</button></a>
+							<button type="submit" class="btn-mua" style="width:25%;background:white;color:red;border:1px solid #ddd;"><i class="fa fa-heart"></i></button>
 						</div><!--content-button-->
 					</div><!--content-excerpt-->
 				</div><!--content-->

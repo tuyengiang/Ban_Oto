@@ -29,7 +29,7 @@
 			$images_type=$_FILES["hinhanh"]["type"][$id];
 			$explode=explode(".",$name);
 			$ext=end($explode);
-			$path="/var/www/html/Web_Ban_Oto/images/anhsanpham/";
+			$path="/var/www/html/Ban_Oto/Web_Ban_Oto/images/anhsanpham/";
 			$path=$path.basename($explode[0].time().".".$ext);
 			$thongbao=array();
 			$anh=basename($explode[0].time().".".$ext);
