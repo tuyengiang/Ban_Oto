@@ -68,7 +68,7 @@
 								if($row["check_cart"]=="0"){
 									echo "Đang xử lý";
 								}else{
-									echo "Đã xử lý";
+									echo "Đã gửi hàng";
 								}
 							 ?>		
 
@@ -95,10 +95,7 @@
 				 </div><!--hang-maua-->
 				 <?php endwhile; ?>
 				<div style="clear:left;"></div>
-				<?php 
-					if(isset($_GET["page"])){
-
-				 ?>
+				
 					<div class="next">
 						<ul>
 							<li><i class="fa fa-angle-double-right"></i></li>
@@ -111,11 +108,7 @@
 							<?php endfor; ?>
 						</ul>
 					</div><!--next-->
-				 <?php 
-					}
-
-
-				 ?>
+				
 	
 			</div>
 			<div id="apph2" class="app">

@@ -26,7 +26,7 @@
 						<li><i class="fa fa-bars"></i><a href="danh-sach-pro.php">Danh sách sản phẩm</a></li><li><i class="fa fa-bars"></i><a href="danh-sach-cm.php">Danh sách chuyên mục</a></li>
 					</ul>
 				</li>
-				<li><i class="fa fa-money"></i><a href="doanh-thu.php">Doanh Thu</a></li>
+				<li><i class="fa fa-money"></i><a href="doanh-thu.php">Sản phẩm đã bán</a></li>
 				<li><i class="fa fa-user"></i><a href="danh-sach-tv.php">Thành viên <i style="float:right;padding-right:30px;" class="fa fa-angle-down"></i></a>
 					<ul class="sub-menu">
 						<li><i class="fa fa-plus"></i><a href="add-user.php">Thêm thành viên</a></li><li><i class="fa fa-bars"></i><a href="danh-sach-tv.php">Danh sách thành viên</a></li>

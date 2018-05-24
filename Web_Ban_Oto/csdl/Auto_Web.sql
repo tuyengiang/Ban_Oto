@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 16, 2018 at 09:27 AM
+-- Generation Time: May 24, 2018 at 10:48 PM
 -- Server version: 5.7.22-0ubuntu0.16.04.1
 -- PHP Version: 7.0.30-0ubuntu0.16.04.1
 
@@ -33,24 +33,31 @@ CREATE TABLE `cart` (
   `hinhanh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `soluong` int(11) NOT NULL,
   `giaban` int(11) NOT NULL,
-  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `check_cart` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `masp`, `tensp`, `hinhanh`, `soluong`, `giaban`, `email`) VALUES
-(1, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangle@gmail.com'),
-(2, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangle@gmail.com'),
-(3, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangle@gmail.com'),
-(4, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'giangle@gmail.com'),
-(5, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangtuyen@gmail.com'),
-(6, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 1, 990000000, 'giangtuyen@gmail.com'),
-(7, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangtuyen@gmail.com'),
-(8, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangtuyen@gmail.com'),
-(9, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com'),
-(10, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com');
+INSERT INTO `cart` (`id`, `masp`, `tensp`, `hinhanh`, `soluong`, `giaban`, `email`, `check_cart`) VALUES
+(1, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangle@gmail.com', 1),
+(2, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangle@gmail.com', 1),
+(3, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangle@gmail.com', 1),
+(4, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'giangle@gmail.com', 1),
+(5, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 3, 1797000000, 'giangtuyen@gmail.com', 1),
+(6, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 1, 990000000, 'giangtuyen@gmail.com', 1),
+(7, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangtuyen@gmail.com', 1),
+(8, 'A26', 'Honda City 2016', 'Honda-Amaze-New-Exterior-1203221524538799.jpg', 2, 1000000000, 'giangtuyen@gmail.com', 1),
+(9, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com', 1),
+(10, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangtuyen@gmail.com', 1),
+(13, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'giangdaica@gmail.com', 1),
+(14, 'A24', 'Honda City New', 'Honda-Civic-New-Exterior-905241524537653.jpg', 2, 1980000000, 'giangdaica@gmail.com', 1),
+(15, 'A15', 'HONDA CITY 2018 1.5 CVT', '3-21524534457.jpg', 1, 523000000, 'giangdaica@gmail.com', 1),
+(16, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 2, 1198000000, 'giangtuyen@gmail.com', 1),
+(17, 'A01', 'Honda City 2018', '1_Honda_Colors_White01524493493.png', 1, 500000000, 'giangtuyen@gmail.com', 0),
+(18, 'A27', 'Honda City 1.5 TOP', 'nen1524497540.jpg', 1, 599000000, 'hieuhight@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -203,7 +210,9 @@ INSERT INTO `hinhanh` (`id`, `id_sanpham`, `hinhanh`) VALUES
 (109, 'A25', 'Honda-WRV-Front-view-929841524538291.jpg'),
 (110, 'A25', 'Honda-WRV-Right-Front-Three-Quarter-929871524538291.jpg'),
 (111, 'A26', 'Honda-Amaze-New-Exterior-1203221524538807.jpg'),
-(112, 'A30', 'nguoi_con_gai_toi_yeu1525418204.jpg');
+(112, 'A30', 'nguoi_con_gai_toi_yeu1525418204.jpg'),
+(113, 'dfgh', '30174380_263346797539999_51543276_o1526563583.jpg'),
+(114, 'dfgh', '30224038_263346844206661_798520487_o1526563583.jpg');
 
 -- --------------------------------------------------------
 
@@ -224,7 +233,9 @@ CREATE TABLE `lienhe` (
 
 INSERT INTO `lienhe` (`id`, `hoten`, `email`, `noidung`) VALUES
 (2, 'Nguyễn Tuyển Giảng', 'nguyentuyengiangbn@gmail.com', 'Trang cần thêm nhiều tính năng cụ thể hơn'),
-(3, 'sdef', 'sadfg', 'sdf');
+(3, 'sdef', 'sadfg', 'sdf'),
+(4, 'h hh', 'hieuhight@gmail.com', 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq'),
+(5, 'h hh', 'hieuhight@gmail.com', 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq');
 
 -- --------------------------------------------------------
 
@@ -305,10 +316,12 @@ INSERT INTO `taikhoan` (`id`, `email`, `hoten`, `matkhau`, `gioitinh`, `sodienth
 (12, 'nguyentuyengiangbn@gmail.com', 'Nguyễn Tuyển Giảng', '243079561a38e3d13383b8ea6bd444b5', 1, 965565742, '1997-10-24', 'nguoi_con_gai_toi_yeu1525748086.jpg', 1),
 (13, 'phamquanghieu@gmail.com', 'Pham Quang Hieu', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-01-10', '', 1),
 (14, 'tuyengiang97@gmail.com', 'Nguyễn Tuyển Giảng', '9cbf8a4dcb8e30682b927f352d6559a0', 1, 965565742, '1997-10-24', '', 2),
-(19, 'giangle@gmail.com', 'Truong Thi le', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', '', 2),
 (20, 'tuyengiang1005@gmail.com', 'Nguyen Tuyen Giang', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', '', 2),
 (21, 'tuyengiang1997@gmail.com', 'Giang dai ca', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-10-24', 'co-gai-toi-yeu1525058258.jpg', 1),
-(22, 'giangtuyen@gmail.com', 'Giảng Tuyển', 'fcea920f7412b5da7be0cf42b8c93759', 1, 965565742, '1997-10-24', NULL, 2);
+(22, 'giangtuyen@gmail.com', 'Giảng Tuyển', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1997-10-24', NULL, 2),
+(23, 'giangdaica@gmail.com', 'Tuyển Giảng', 'ceea23519f6f86ad67e9f798bf8002cb', 1, 965565742, '1950-01-01', NULL, 2),
+(24, 'hieuhight@gmail.com', 'crhfu', 'faeb35c5e94e8ba95885629e7475d79d', 1, 965565742, '1950-01-01', NULL, 2),
+(25, '11@gmail.com', 'h hh', '25d55ad283aa400af464c76d713c07ad', 1, 987654321, '1950-01-01', NULL, 2);
 
 --
 -- Indexes for dumped tables
@@ -358,22 +371,22 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `hinhanh`
 --
 ALTER TABLE `hinhanh`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 --
 -- AUTO_INCREMENT for table `lienhe`
 --
 ALTER TABLE `lienhe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

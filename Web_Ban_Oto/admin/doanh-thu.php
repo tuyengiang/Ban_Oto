@@ -81,7 +81,8 @@
 				</td>
 				<td>
 					<?php 
-						$sql1="SELECT taikhoan.hoten,taikhoan.email,cart.email as cemail FROM taikhoan,cart WHERE taikhoan.email=cart.email";
+						$email=$row["email"];
+						$sql1="SELECT taikhoan.hoten,taikhoan.email,cart.email as cemail FROM taikhoan,cart WHERE taikhoan.email='$email'";
 						$query1=mysqli_query($conn,$sql1);
 						$row1=mysqli_fetch_array($query1,MYSQLI_ASSOC);
 						
@@ -120,7 +121,7 @@
 				for($i=0;$i<$totalpage;$i++):
 			 ?>
 
-			 <li ><a class="<?php echo ($i+1) == $page ? "active" : "" ;?>" href="danh-sach-pro.php?page=<?php echo($i+1); ?>"><?php echo ($i+1) ?></a></li>
+			 <li ><a class="<?php echo ($i+1) == $page ? "active" : "" ;?>" href="danh-thu.php?page=<?php echo($i+1); ?>"><?php echo ($i+1) ?></a></li>
 
 			<?php endfor; ?>
 		</ul>
@@ -182,10 +183,12 @@
 							}
 				}
 				 ?>
+
 				</td>
 				<td>
 					<?php 
-						$sql1="SELECT taikhoan.hoten,taikhoan.email,cart.email as cemail FROM taikhoan,cart WHERE taikhoan.email=cart.email";
+						$email=$row["email"];
+						$sql1="SELECT taikhoan.hoten,taikhoan.email,cart.email as cemail FROM taikhoan,cart WHERE taikhoan.email='$email'";
 						$query1=mysqli_query($conn,$sql1);
 						$row1=mysqli_fetch_array($query1,MYSQLI_ASSOC);
 						
@@ -224,7 +227,7 @@
 				for($i=0;$i<$totalpage;$i++):
 			 ?>
 
-			 <li ><a class="<?php echo ($i+1) == $page ? "active" : "" ;?>" href="danh-sach-pro.php?page=<?php echo($i+1); ?>"><?php echo ($i+1) ?></a></li>
+			 <li ><a class="<?php echo ($i+1) == $page ? "active" : "" ;?>" href="doanh-thu.php?page=<?php echo($i+1); ?>"><?php echo ($i+1) ?></a></li>
 
 			<?php endfor; ?>
 		</ul>

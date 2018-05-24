@@ -10,4 +10,4 @@
 		<?php require_once("template/main.php"); ?>
 	
 	</div><!--main-->
-	<?php require_once('template/bottom.php'); ?>
+<?php require_once('template/bottom.php'); ?>

@@ -13,6 +13,7 @@
 		$sex=$_POST["gioitinh"];
 		$brithday=$namsinh."-".$thangsinh."-".$ngaysinh;
 		$error_array=array();
+		$dienthoai=substr($phone,0,1);
 		if(validate_hoten_exits($hoten)){
 			$error_array["hoten"]="Họ tên có quá nhiều khoảng cách giữa các chữ !!!";
 		}
@@ -31,14 +32,11 @@
 		if(strlen($phone)<9 || strlen($phone)>11){
 			$error_array["phone"]="Số điện thoại phải lớn hơn 9 và nhỏ hơn 12 ký tự !!!";
 		}
+		if($dienthoai!="0"){
+			$error_array["phone"]="Số điện thoại bạn nhập phải bắt đầu là số 0 !!!";
+		}
 		if($password1!=$password2 || !validate_password($password1) || validate_strlen($password1)){
 			$error_array["matkhau"]="Mật khẩu phải thỏa mãn: Mật khẩu nhập phải khớp nhau hoặc lớn hơn 8 và nhỏ hơn 16 ký tự !!!";
-		}
-		if(is_numeric($ngaysinh)<1 && is_numeric($ngaysinh)>31){
-			$error_array["ngaysinh"]="Ngày sinh bạn nhập phải từ 1 đến 31 !!!";
-		}
-		if($thangsinh<1 && $thangsinh>12){
-			$error_array["thangsinh"]="Tháng sinh bạn nhập phải từ 1 đến 12 !!!";
 		}
 
 		if(empty($error_array)){

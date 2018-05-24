@@ -48,9 +48,8 @@
 			<li style="width:3%;"><a href="index.php"><i class="fa fa-home"></i></a></li>
 			<li style="width:3%;">/</li>
 			<li ><a href="dang-nhap.php">Đăng nhập</a></li>
-
-
 		</div>
+	
 	</div>
 	<div class="main">
 		<div class="main-right" style="width:45%;background:#f7f7f7;border-radius:0.3em;padding:1em;">
@@ -82,7 +81,7 @@
 				<br>
 				<br>
 				<label>
-					<a href="quen-mat-khau.php" class="question">Quên mật khẩu ?</a>
+					<a href="quenmatkhau.php" class="question">Quên mật khẩu ?</a>
 				</label>
 				<br>
 				<input type="hidden" name="dang-nhap" value="dang-nhap">

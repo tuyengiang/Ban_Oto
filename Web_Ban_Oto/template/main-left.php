@@ -24,7 +24,7 @@
 								<option>Tìm theo gía</option>
 								<option value="low">Từ 200tr - 600tr</option>
 								<option value="average">Từ 600tr - 900tr</option>
-								<option value="hight">> 1tỷ</option>
+								<option value="hight">Từ 900tr - > 1tỷ</option>
 							</select>	
 						</label>
 						<center><button style="width:60%;margin-bottom:10px;" type="submit" class="btn-mua" name="price-search"><i class="fa fa-search"></i> Tìm kiếm</button></center>

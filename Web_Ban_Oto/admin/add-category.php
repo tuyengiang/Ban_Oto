@@ -16,7 +16,6 @@
 			$thongbao=array();
 			$ma="SELECT madanhmuc FROM danhmuc WHERE madanhmuc='{$madanhmuc}'";
 			$check=mysqli_num_rows(mysqli_query($conn,$ma));
-
 			if($check>0){
 				$thongbao["madanhmuc"]="Mã danh mục đã tồn tại !!!";
 			}
